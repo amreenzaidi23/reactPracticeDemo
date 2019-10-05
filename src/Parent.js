@@ -1,25 +1,21 @@
 import React, { Component } from "react";
+import Child from "./Child";
 
 class Parent extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      parentName: "Zeeshan"
+      message: "Amreen"
     };
+    this.greet = this.greet.bind(this);
   }
-
-  display() {
-    this.setState({
-      parentName: "Amreen"
-    });
-    console.log(this);
+  greet(childName) {
+    alert(`Hello parent ${this.state.message} from child is: ${childName}`);
   }
   render() {
     return (
       <div>
-        <h1>{this.state.parentName}</h1>
-        {/*<button onClick={this.display.bind(this)}>Click Button</button>*/}
-        {/*<button onClick={() => this.display()}>Click Button</button>*/}
+        <Child greets={this.greet} />
       </div>
     );
   }

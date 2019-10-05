@@ -1,12 +1,9 @@
 import React from "react";
 
-function clickHandler() {
-  function display() {
-    console.log("hello child display");
-  }
+function clickHandler(props) {
   return (
     <div>
-      <button onClick={display}>Click CHild</button>
+      <button onClick={() => props.greets("Aayat")}>Click Child</button>
     </div>
   );
 }

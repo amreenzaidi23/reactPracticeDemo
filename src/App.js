@@ -1,13 +1,14 @@
 import React from "react";
+import BindPract from "./BindPract";
+import Child from "./functionalComponent";
 import Parent from "./Parent";
-import Child from "./child";
+import TernaryPractice from "./ternaryPractice";
 import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <Child />
-      <Parent />
+      <TernaryPractice />
     </div>
   );
 }
